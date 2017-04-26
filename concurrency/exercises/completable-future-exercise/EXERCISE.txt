@@ -1,0 +1,51 @@
+
+1) Verwendung der alten API:
+   Schreibe eine Klasse "FutureTest" mit den folgenden Test Cases:
+
+   a) testFuturePull()
+      - Erzeuge einen neuen ExecutorService als Fixed Thread Pool mit 5 Threads
+      - Erzeuge eine Instanz der Beispielklasse "QuoteService"
+      - Übergebe 2 Tasks an den ExecutorService:
+        - quoteService.getQuoteFromSupplier("A")
+        - quoteService.getQuoteFromSupplier("B")
+        Beides liefert einen Future<Integer> zurück.
+      - Verwende das Poll-Verfahren, um auf beide Preisauskünfte zu warten.
+      - Berechne den Durchschnittspreis durch Aufruf von
+        quoteService.calculateAveragePrice(quoteFromA, quoteFromB)  
+      
+   b) testFuturePoll()
+      - Wie a), allerdings mit dem Poll-Verfahren.
+      
+2) Verwendung der neuen API:
+   Schreibe eine Klasse "CompletableFutureTest" mit den folgenden Test Cases:
+
+   a) Verwende CompletableFuture, um nacheinander die folgenden Operationen von QuoteService auszuführen:
+        getQuoteFromSupplier("A") 
+		computeSalePrice(Integer)
+		displaySalePrice(Integer)
+		sendEmailNotification()
+      Der Test Case soll nicht beendet werden, bevor alle Stufen durchlaufen wurden.
+      Während des Wartens soll regelmäßig eine symbolische Log-Meldung ausgegeben werden.
+      
+   b) Erweitere den Test aus a) durch eine Fehlerbehandlung für getQuoteFromSupplier("A")
+      mittels exceptionally(...). Im Fehlerfall soll mit dem symbolischen Preis "-1" 
+      weiter gearbeitet werden.
+       
+   c) Schreibe einen weiteren TestCase, bei dem zunächst mit zwei separaten CompletableFutures
+      die folgenden Operationen ausgeführt werden:
+        getQuoteFromSupplier("A") 
+        getQuoteFromSupplier("B") 
+      Anschließend sollen die folgenden Stufen mit der schnelleren der beiden Preisauskünfte
+      durchgeführt werden:
+		computeSalePrice(Integer)
+		displaySalePrice(Integer)
+		sendEmailNotification()
+      Der Test Case soll nicht beendet werden, bevor alle Stufen durchlaufen wurden.
+      Während des Wartens soll regelmäßig eine symbolische Log-Meldung ausgegeben werden.
+    
+   d) Verwende 5 CompletableFutures, um Preisauskünfte von A, B, C, D und E einzuholen.
+      Erst wenn alle Preisauskünfte eingegangen sind, soll das günstigste der fünf Angebote
+      ermittelt werden. Dies ist zum Beispiel mit einem IntStream und min() möglich.
+              
+      Der Test Case soll nicht beendet werden, bevor alle Stufen durchlaufen wurden.
+      Während des Wartens soll regelmäßig eine symbolische Log-Meldung ausgegeben werden.
