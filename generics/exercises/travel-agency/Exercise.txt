@@ -1,0 +1,30 @@
+
+1) Create a generic interface called Task<P, R>
+
+=> P and R are type parameters representing arbitrary classes for task parameters and task results
+=> Task<P, R> should have exactly one method: R execute();
+
+
+2) Create classes for 2 different tasks:
+
+- class FlightSearchTask implements Task<SearchCriteria, FlightDetails>
+  => classes SearchCriteria and FlightDetails represent task params and result
+  => FlightSearchTask should have a constructor with a parameter of type SearchCriteria
+  => execute() should return an instance of FlightDetails
+
+- class FlightBookingTask implements Task<FlightDetails, BookingConfirmation>
+  => classes FlightDetails and BookingConfirmation represent task params and result
+  => FlightBookingTask should have a constructor with a parameter of type FlightDetails
+  => execute() should return an instance of BookingConfirmation
+
+
+3) Create JUnit test cases to check that the execute methods of both tasks work correctly
+
+
+4) Create a class called BookingEngine with a method that expects a list of Tasks as a
+   parameter and returns a list of results. This method should be able to process lists
+   that contains a mixture of FlightSearchTask and FlightBookingTask. Finding the correct
+   method signature is the trickiest part of this exercise.
+
+
+5) Create a JUnit test case that checks if the BookingEngine works as expected.
