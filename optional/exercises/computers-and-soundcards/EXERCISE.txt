@@ -1,0 +1,39 @@
+
+Starting point: class USB
+
+- Create a class "Soundcard" that has an Optional<USB>.
+  
+  Implement a constructor with no arguments and a second constructor with 
+  an argument of type USB and set the Optional<USB> correctly for both cases.
+  
+
+- Create a class "Computer" that has an Optional<Soundcard>.
+  
+  Implement a constructor with no arguments and a second constructor with
+  an argument of type Soundcard and set the Optional<Soundcard> correctly for both cases.
+  
+  
+- Implement a test class with the following test cases:
+
+  - Create a soundcard with USB and a soundcard without USB.
+    Find a good way to print the USB version of each soundcard without running into NPEs 
+    and without using "if (condition) { //print it }"
+    
+  - Create a soundcard with USB and a soundcard without USB.
+    Find a good way to print either
+    - the USB version of each soundcard, or
+    - an alternative message if no USB is available
+    without running into NPEs and without using "if (condition) { //print it }"
+  
+  - Create a computer with a soundcard and USB. Use Optional.map() and/or Optional.flatMap()
+    to retrieve the USB version of the computer's soundcard.
+  
+  - Create 3 computers:
+    a) with soundcard and USB 3.0
+    b) with soundcard and USB 2.0
+    c) with soundcard and no USB
+  
+  	Create a stream of these computers and for those with soundcards and USB print the
+  	USB version to the console.
+  	
+ 
