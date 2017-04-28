@@ -1,0 +1,46 @@
+
+=================================================
+Exercise : Book index
+=================================================
+
+Consider the problem of making an index for a book. An index consists of a list of terms that 
+appear in the book. Next to each term is a list of the pages on which that term appears. To
+represent an index in a program, we need a data structure that can hold a list of terms, along 
+with a list of pages for each term. Adding new data should be easy and efficient. When it's 
+time to print the index, it should be easy to access the terms in alphabetical order. There 
+are many ways this could be done, but for this exercise we'll do it with generic data 
+structures and collections.
+
+- Create a class Index containing a collection that meets the above requirements for an index.
+
+- Implement a method that adds a page reference to the index
+
+  void addReference(String term, int pageNum) {
+
+- Implement a method that prints the index. We want to iterate through the index 
+  and print out each term, together with the set of page references for that term. 
+
+  void printIndex() 
+
+  Page numbers for a term should be separated by commas. Find an elegant way (using
+  the features of your collection class!) to make sure no comma is printed after the
+  last page number.
+
+- Test your solution using the sample BookReader.
+
+
+=================================================
+Exercise: Add a Comparator for alphabetical ordering
+=================================================
+
+There is a potential problem with our solution to the indexing problem. If the terms in the 
+index can contain both upper case and lower case letters, then the terms will not be in 
+alphabetical order! The ordering on String is not alphabetical. It is based on the Unicode 
+codes of the characters in the string. The codes for all the upper case letters are less than 
+the codes for the lower case letters. So, for example, terms beginning with "Z" come before 
+terms beginning with "a". If the terms are restricted to use lower case letters only (or upper 
+case only), then the ordering would be alphabetical. But suppose that we allow both upper and 
+lower case, and that we insist on alphabetical order. In that case, our index can't use the 
+usual ordering for Strings. How can we solve this issue?
+
+

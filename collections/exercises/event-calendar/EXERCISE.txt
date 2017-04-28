@@ -1,0 +1,13 @@
+
+===================================
+Exercise: Calendar of events
+===================================
+
+In this exercise we want to store Events in a collection that allows
+implementing search operations like "get all events before..." or
+"get all events after..." in a very simple way.
+
+Create a class that implements the EventCalendar interface, so that
+the EventCalendarTest can be run successfully. What collection type 
+provides the best support for the required search operations, and
+should therefore be used to store events inside the EventCalendar?
