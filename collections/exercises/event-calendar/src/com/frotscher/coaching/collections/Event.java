@@ -12,7 +12,7 @@ public class Event {
 		Objects.requireNonNull(dateTime);
 		Objects.requireNonNull(name);
 		this.dateTime = dateTime;
-		this.name = name;
+        this.name = name;
 	}
 
 	public LocalDateTime getDateTime() {
