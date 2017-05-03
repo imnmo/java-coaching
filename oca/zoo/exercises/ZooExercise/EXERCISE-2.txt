@@ -1,0 +1,22 @@
+
+- Change your existing class "Lion" so that it implements the "Swimming" interface.
+  Then add the swim() method that it now required to "Lion". The swim() method should
+  throw an AfraidOfSwimmingException. Pass any error message you like to the constructor.
+  
+- Lion won't compile after declaring that swim() throws AfraidOfSwimmingException.
+  Think about the reason for this compiler error.
+  
+- Extends the "Swimming" interface to that swim() throws SwimmingRefusedException.
+  Why does this fix the compiler error in the Lion class?
+  
+- Now your Zoo class has a compiler error. What's the reason for this error?
+
+- Fix your Zoo class by adding an exception handling for AfraidOfSwimmingException.
+
+- Add specific exception handling for subclasses of AfraidOfSwimmingException. 
+  Then change your Duck class so that it also throws one of the exceptions.
+  
+- Note that Dolphin still has a swim() method that does not throw or declare any exceptions.
+  It overrides the swim() method from the Swimming interface and declares that it throws
+  less (i.e. no) exceptions.
+  

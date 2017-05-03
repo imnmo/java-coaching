@@ -1,0 +1,41 @@
+
+
+All methods for animal features just need to do a simple System.out.println(...)
+and output what they do, like "Lion is eating" or "Duck is growing feathers".
+
+- Implement an abstract class "Animal" with the property "name" and the methods "public String getName()" and "public void eat()".
+  The constructor should have "name" as a parameter. 
+
+
+- Implement an abstract class "Mammal" that extends "Animal". It should have a method "public void giveBirth()".
+
+- Implement concrete classes "Lion" and "Dolphin" that extend Mammal.
+  Their constructors should have no parameters and call the constructor of Mammal, passing the animal's name, like "super("Lion")".
+
+
+
+- Implement an abstract class "Bird" that extends "Animal". It should have a method "public void growFeathers()".
+
+- Implement concrete classes "Eagle", "Duck" and "Emu" that extend Bird.
+  Their constructors should have no parameters and call the constructor of Bird, passing the animal's name, like "super("Eagle")".
+
+
+
+- Implement an abstract class "Reptile" that extends "Animal". It should have a method "public void changeBodyTemperature()".
+
+- Implement concrete classes "Crocodile" and "Snake" that extend Reptile. 
+  Their constructors should have no parameters and call the constructor of Reptile , passing the animal's name, like "super("Snake")".
+
+
+
+- Implement the interface "Swimming" with method "swim()". Let all animals capable of swimming implement the interface "Swimming"
+
+- Implement the interface "Flying" with method "fly()". Let all animals capable of flying implement the interface "Flying"
+
+- Implement the interface "Walking" with method "walk()". Let all animals capable of walking implement the interface "Walking"
+
+
+- Implement a "Zoo" with a List<Animal>. Populate the list with all kinds of Animals. 
+  Then let them swim, fly and walk. This will require casting the animals to one of the interfaces.
+
+- (optional) Add a default method "land" to the interface "Flying". Override the default implementation for some of the flying animals
