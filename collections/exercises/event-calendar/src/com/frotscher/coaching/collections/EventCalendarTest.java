@@ -32,13 +32,13 @@ public class EventCalendarTest {
 		Collection<Event> eventsBefore = cal.getEventsBefore(LocalDateTime.of(2017, 4, 26, 0, 0, 0));
 		Collection<Event> eventsBetween = cal.getEventsBetween(LocalDateTime.of(2017, 4, 25, 0, 0, 0),
 				                                               LocalDateTime.of(2017, 4, 28, 12, 0, 0));
-//		assertNotNull(eventsAfter);
-//		assertEquals(12, eventsAfter.size());
-//
-//		assertNotNull(eventsBefore);
-//		assertEquals(6, eventsBefore.size());
-//		
-//		assertNotNull(eventsBetween);
-//		assertEquals(7, eventsBetween.size());
+		assertNotNull(eventsAfter);
+		assertEquals(12, eventsAfter.size());
+
+		assertNotNull(eventsBefore);
+		assertEquals(6, eventsBefore.size());
+		
+		assertNotNull(eventsBetween);
+		assertEquals(7, eventsBetween.size());
 	}
 }
