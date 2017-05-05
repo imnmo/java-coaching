@@ -10,21 +10,21 @@ import org.junit.Test;
 
 public class TrainingTest {
 
-	@Test
-	public void testGetTrainees() {
-		Training training = new Training();
-		List<String> trainees = training.getTrainees();
-		
-		assertNotNull(trainees);
-		assertTrue(trainees.contains("Uwe Meier"));
-		assertFalse(trainees.contains("Thilo"));
-		
-		for (String trainee : trainees) {
-			System.out.println(trainee);
-		}
-		
-		trainees.stream().forEach(System.out::println);
-	}
+//	@Test
+//	public void testGetTrainees() {
+//		Training training = new Training();
+//		List<String> trainees = training.getTrainees();
+//		
+//		assertNotNull(trainees);
+//		assertTrue(trainees.contains("Uwe Meier"));
+//		assertFalse(trainees.contains("Thilo"));
+////		
+////		for (String trainee : trainees) {
+////			System.out.println(trainee);
+////		}
+//		
+//		trainees.stream().forEach(System.out::println);
+//	}
 	
 	@Test
 	public void testGetTraineesAsPersons() {

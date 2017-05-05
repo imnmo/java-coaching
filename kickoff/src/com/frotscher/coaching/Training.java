@@ -39,9 +39,9 @@ public class Training {
 		trainees.add(new Person("Rasul" , "Wakili"));
 		trainees.add(new Person("Joern", "Hinrichsen"));
 		
-//		Collections.sort(trainees, new PersonComparator());
+		Collections.sort(trainees, new PersonComparator());
 		
-		Collections.sort(trainees, (p1, p2) -> p2.getName().compareTo(p1.getName()));
+//		Collections.sort(trainees, (p1, p2) -> p2.getName().compareTo(p1.getName()));
 		
 		return trainees;
 	}

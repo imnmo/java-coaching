@@ -51,7 +51,6 @@ public class EventCalendarSolution implements EventCalendar {
 
 	@Override
 	public Collection<Event> getEventsBetween(LocalDateTime begin, LocalDateTime end) {
-	    
 	    java.util.List<Event> eventsBetween = new ArrayList<>();
 	    
 	    eventsBetween = eventCalendar.entrySet()
@@ -61,7 +60,4 @@ public class EventCalendarSolution implements EventCalendar {
 	                                 .collect(Collectors.toList());
 	    return eventsBetween;
 	}
-	
-	
-	
 }

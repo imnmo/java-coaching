@@ -1,3 +1,4 @@
+
 package com.frotscher.coaching.collections;
 
 import java.util.ArrayList;
